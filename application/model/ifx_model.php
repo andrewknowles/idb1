@@ -1,6 +1,5 @@
 <?php
 
-unset($_SESSION['valid_user']);
 class Ifx_Model
   {
     /**

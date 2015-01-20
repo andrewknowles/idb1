@@ -24,7 +24,7 @@
         <a href="<?php echo URL; ?>home/exampleone">documentation</a>
         <a href="<?php echo URL; ?>home/exampletwo">support</a>
         <a href="<?php echo URL; ?>companybranch">error msg</a>
-        <a href="<?php echo URL; ?>companybranch">Query Editor</a>
+        <a href="application/libs/query_editor2.php">Query Editor</a>
     </div>
     
         <!-- logo -->

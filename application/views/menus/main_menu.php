@@ -6,7 +6,7 @@ if (!empty($_SESSION['message']))
 	echo '<h2>'.$_SESSION['message'].'</h2>';
 	unset($_SESSION['message']);
 }
-var_dump($_SESSION['valid_user']);
+
 ?>
 <form action="<?php echo URL; ?>MenuChoice_Controller/SelectQuery" method="POST" accept-charset='UTF-8'>
 

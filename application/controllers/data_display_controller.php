@@ -1,17 +1,14 @@
 <?php 
-//session_start();
+session_start();
 
 
 class Data_Display_Controller extends Controller
 {
 
 	public function RunQueryByNumber($qry)
-	{
-		
-//		echo $qry;
-		
+	{		
 		$quickquery =	$this->Mymodel->GetQueriesByNumber($qry);
-//		var_dump($quickquery);
+
 		$this->Ifxmodel->RunDetailQuery();
 
 		require APP . 'views/_templates/header.php';
