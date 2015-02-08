@@ -61,7 +61,7 @@ class My_Model
    public function GetQueriesByType($type)
    {
    	
-   	$sql = 'select qry_id, qry_title, qry_qry, qry_qry2, qry_qry3, qry_detail from idb_query where qry_type = :type';
+   	$sql = 'select qry_id, qry_title, qry_qry, qry_qry2, qry_qry3, qry_detail from idb_query where qry_type = :type order by qry_order';
    	$query = $this->MyDb->prepare($sql);
    	$parameters = array(':type' => $type);
   	$query->execute($parameters);
