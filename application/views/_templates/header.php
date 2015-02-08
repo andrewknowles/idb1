@@ -19,7 +19,7 @@
     <!-- navigation -->
     <div class="navigation">
         <a href="<?php echo URL; ?>">login</a>
-        <a href="<?php echo URL; ?>home_controller/mainmenu">main_menu</a>
+        <a href="<?php echo URL; ?>MenuChoice_Controller/SelectQuery">main_menu</a>
         <a href="<?php echo URL; ?>home/exampleone">return</a>
         <a href="<?php echo URL; ?>home/exampleone">documentation</a>
         <a href="<?php echo URL; ?>home/exampletwo">support</a>

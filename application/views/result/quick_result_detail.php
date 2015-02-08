@@ -23,8 +23,9 @@ foreach($_SESSION['detail_result'] as $res)
 }
 
 echo $tbl2->display();
+
 		?>
 
-You are in the View: application/views/result/quickResult.php
+You are in the View: application/views/result/quick_result_detail.php
 
 </div>

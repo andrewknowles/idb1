@@ -28,34 +28,32 @@ foreach($_SESSION['branches'] as $x=>$x_value) {?>
 <?php }?>
 <option value = 'allbr'>All Branches</option>option>
 </select>
-
-<table>
-<th>
+</br></br>
+<table border="1">
 <td>Parts</td>
 <td>Service</td>
 <td>Unit Sales</td>
 <td>Finance</td>
-</th>
 <tr>
-<td><input type="radio" name="mainmenuchoice" value="quick" checked>Quick Status</td>
-<td><input type="radio" name="mainmenuchoice" value="a" checked>a</td>
-<td><input type="radio" name="mainmenuchoice" value="b" checked>b</td>
-<td><input type="radio" name="mainmenuchoice" value="c" checked>c</td></tr>
+<td><input type="radio" name="mainmenuchoice" value="quick" checked>Quick Status Parts</td>
+<td><input type="radio" name="mainmenuchoice" value="a" checked>Quick Status Service</td>
+<td><input type="radio" name="mainmenuchoice" value="b" checked>Quick Status Unit Sales</td>
+<td><input type="radio" name="mainmenuchoice" value="c" checked>To define</td></tr>
 <tr>
-<td><input type="radio" name="mainmenuchoice" value="d" checked>d</td>
-<td><input type="radio" name="mainmenuchoice" value="e" checked>e</td>
-<td><input type="radio" name="mainmenuchoice" value="f" checked>f</td>
-<td><input type="radio" name="mainmenuchoice" value="g" checked>g</td></tr>
+<td><input type="radio" name="mainmenuchoice" value="d" checked>Detail Reports Parts</td>
+<td><input type="radio" name="mainmenuchoice" value="e" checked>Detail Reports Service</td>
+<td><input type="radio" name="mainmenuchoice" value="f" checked>To define</td>
+<td><input type="radio" name="mainmenuchoice" value="g" checked>To define</td></tr>
 <tr>
-<td><input type="radio" name="mainmenuchoice" value="h" checked>h</td>
-<td><input type="radio" name="mainmenuchoice" value="i" checked>i</td>
-<td><input type="radio" name="mainmenuchoice" value="j" checked>j</td>
-<td><input type="radio" name="mainmenuchoice" value="k" checked>k</td></tr>
+<td><input type="radio" name="mainmenuchoice" value="h" checked>Parts Stocks</td>
+<td><input type="radio" name="mainmenuchoice" value="i" checked>Work In Progress</td>
+<td><input type="radio" name="mainmenuchoice" value="j" checked>To define</td>
+<td><input type="radio" name="mainmenuchoice" value="k" checked>To define</td></tr>
 <tr>
-<td><input type="radio" name="mainmenuchoice" value="l" checked>l</td>
-<td><input type="radio" name="mainmenuchoice" value="m" checked>m</td>
-<td><input type="radio" name="mainmenuchoice" value="n" checked>n</td>
-<td><input type="radio" name="mainmenuchoice" value="o" checked>o</td></tr>
+<td><input type="radio" name="mainmenuchoice" value="part_sale" checked>Parts Sales</td>
+<td><input type="radio" name="mainmenuchoice" value="m" checked>Technician Utilisation</td>
+<td><input type="radio" name="mainmenuchoice" value="n" checked>To define</td>
+<td><input type="radio" name="mainmenuchoice" value="o" checked>To define</td></tr>
 </table>
 
 <input type='submit' name='Submit' value='Submit' />

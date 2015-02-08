@@ -18,7 +18,7 @@ $_SESSION['message'] = 'Must set company/branch';
 		$_SESSION['cpy'] = $_POST['company'];
 		$_SESSION['bra'] = $_POST['branch'];
 			
-		if ($_POST['mainmenuchoice'] = 'quick')
+		if ($_POST['mainmenuchoice'] == 'quick')
 		{
 
 		$quickqueries =	$this->Mymodel->GetQueriesByType(1);	
@@ -29,6 +29,26 @@ $_SESSION['message'] = 'Must set company/branch';
 		}
 		} 
 		
+		if ($_POST['mainmenuchoice'] == 'part_sale')
+		{
+		
+//			$quickqueries =	$this->Mymodel->GetQueriesByType(1);
+//			$this->Ifxmodel->RunQuickQueries();
+			require APP . 'views/_templates/header.php';
+			require APP . 'views/menus/part_sales.php';
+			require APP . 'views/_templates/footer.php';
+		}
+		
+	}
+	
+	
+	public function PartsSales()
+	{
+		$quickqueries =	$this->Mymodel->GetQueriesByType(1);
+		$this->Ifxmodel->RunQuickQueries();
+		require APP . 'views/_templates/header.php';
+		require APP . 'views/result/quickResult.php';
+		require APP . 'views/_templates/footer.php';
 	}
 	
 
