@@ -27,7 +27,19 @@ $_SESSION['message'] = 'Must set company/branch';
 		require APP . 'views/result/quickResult.php';
 		require APP . 'views/_templates/footer.php';
 		}
-		} 
+		 
+		
+		if ($_POST['mainmenuchoice'] == 'quickf')
+		{
+		
+			$quickqueries =	$this->Mymodel->GetQueriesByType(31);
+			$this->Ifxmodel->RunQuickQueries();
+			require APP . 'views/_templates/header.php';
+			require APP . 'views/result/quickResult.php';
+			require APP . 'views/_templates/footer.php';
+		}
+		}
+		
 		
 		if ($_POST['mainmenuchoice'] == 'part_sale')
 		{

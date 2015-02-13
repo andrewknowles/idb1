@@ -38,7 +38,7 @@ foreach($_SESSION['branches'] as $x=>$x_value) {?>
 <td><input type="radio" name="mainmenuchoice" value="quick" checked>Quick Status Parts</td>
 <td><input type="radio" name="mainmenuchoice" value="a" checked>Quick Status Service</td>
 <td><input type="radio" name="mainmenuchoice" value="b" checked>Quick Status Unit Sales</td>
-<td><input type="radio" name="mainmenuchoice" value="c" checked>To define</td></tr>
+<td><input type="radio" name="mainmenuchoice" value="quickf" checked>Quick Status Finance</td></tr>
 <tr>
 <td><input type="radio" name="mainmenuchoice" value="d" checked>Detail Reports Parts</td>
 <td><input type="radio" name="mainmenuchoice" value="e" checked>Detail Reports Service</td>
