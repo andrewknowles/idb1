@@ -9,6 +9,7 @@ class Data_Display_Controller extends Controller
 	{		
 		$quickquery =	$this->Mymodel->GetQueriesByNumber($qry);
 
+
 		$this->Ifxmodel->RunDetailQuery();
 
 		require APP . 'views/_templates/header.php';

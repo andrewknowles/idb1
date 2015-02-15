@@ -190,6 +190,7 @@ class Ifx_Model
             $_SESSION['detail_result'] = array();
             foreach ($_SESSION['qquery'] as $query)
               {
+              	$_SESSION['qtitle'] = $query['qry_title'];
                 if ($_SESSION['bra'] == 'allbr')
                   {
                   	$cpy = str_replace("'", "",trim($_SESSION['cpy']));
