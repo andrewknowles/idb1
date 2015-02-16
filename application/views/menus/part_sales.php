@@ -8,16 +8,16 @@ if (!empty($_SESSION['message']))
 }
 
 ?>
-<form action="<?php echo URL; ?>MenuChoice_Controller/SelectQuery" method="POST" accept-charset='UTF-8'>
+<form action="<?php echo URL; ?>parts_sale_controller/SelectQuery" method="POST" accept-charset='UTF-8'>
 
 <fieldset >
 </br></br>
 <table border="1">
 <tr><td>Parts Sales</td></tr>
-<tr><td><input type="radio" name="mainmenuchoice" value="sbm" checked>Parts Sales by Month</td></tr>
-<tr><td><input type="radio" name="mainmenuchoice" value="a" checked>To define</td></tr>
-<tr><td><input type="radio" name="mainmenuchoice" value="b" checked>To define</td></tr>
-<tr><td><input type="radio" name="mainmenuchoice" value="c" checked>To define</td></tr>
+<tr><td><input type="radio" name="partsalemenuchoice" value="sbm" checked>Parts Sales by Month</td></tr>
+<tr><td><input type="radio" name="partsalemenuchoice" value="a" checked>To define</td></tr>
+<tr><td><input type="radio" name="partsalemenuchoice" value="b" checked>To define</td></tr>
+<tr><td><input type="radio" name="partsalemenuchoice" value="c" checked>To define</td></tr>
 </table>
 
 <input type='submit' name='Submit' value='Submit' />

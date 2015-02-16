@@ -44,13 +44,11 @@ $_SESSION['message'] = 'Must set company/branch';
 		if ($_POST['mainmenuchoice'] == 'part_sale')
 		{
 		
-//			$quickqueries =	$this->Mymodel->GetQueriesByType(1);
-//			$this->Ifxmodel->RunQuickQueries();
 			require APP . 'views/_templates/header.php';
 			require APP . 'views/menus/part_sales.php';
 			require APP . 'views/_templates/footer.php';
 		}
-		
+				
 	}
 	
 	

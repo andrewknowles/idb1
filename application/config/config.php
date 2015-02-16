@@ -52,6 +52,8 @@ define('DB_NAME', 'idb');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
-define('IFXODBC', 'IR_ANDREWDB');
+define('IFXODBC', 'IR_HCMUKPROD');
 define('IFXUSER', 'informix');
 define('IFXPASS', 'informix');
+
+//define('SCRIPTPATH','c:/wamp/www/idb1/application/libs/phpChart/');
