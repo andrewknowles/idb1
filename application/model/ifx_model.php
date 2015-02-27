@@ -209,7 +209,8 @@ class Ifx_Model
                     while ( $row = odbc_fetch_array ( $query1 ) )
                       {
                         array_push($_SESSION['detail_result'], $row);
-                      }               
+                      } 
+                      
               }
             
             if ((count($_SESSION['detail_result']) < 1))

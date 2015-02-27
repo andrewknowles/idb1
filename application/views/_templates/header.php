@@ -31,3 +31,4 @@
     <div class="logo">
     <!-- image in style.css -->
     </div>
+ </body>

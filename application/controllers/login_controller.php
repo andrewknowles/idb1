@@ -29,4 +29,18 @@ class Login_Controller extends Controller
         	require APP . 'views/_templates/footer.php';
         }
     }    
+
+
+/**
+ * AJAX-ACTION: ajaxGetStats
+ * TODO documentation
+ */
+public function ajaxGetStats()
+{
+	$amount_of_songs = $this->Mymodel->CountQueries();
+
+	// simply echo out something. A supersimple API would be possible by echoing JSON here
+	echo 'xxx'.$amount_of_songs;
+}
+
 }

@@ -22,6 +22,20 @@ class My_Model
     }
     
     /**
+     * Count queries
+     */
+    public function CountQueries()
+    {
+    	$sql = 'select count(*) from idb_query';
+    	$query = $this->MyDb->prepare($sql);
+    	$query->execute();
+    	$qrycount = $query->fetchAll(PDO::FETCH_ASSOC);
+    	var_dump($qrycount);
+    	exit;
+    	 return $qrycount;	 
+    }
+    
+    /**
      * Get company and branch queries
      */
     public function getCompanyBranchQueries()
@@ -45,7 +59,7 @@ class My_Model
      */
     public function getUserCount($login, $password)
     {
-		$sql = "select * from idb_users where usr_login = :login and usr_passwd = :password";
+		$sql = "select * from idb_users where usr_login = :login and usr_password = :password";
         $query = $this->MyDb->prepare($sql);
         $parameters = array(':login' => $login, ':password' => $password);
         $query->execute($parameters);
@@ -96,6 +110,24 @@ class My_Model
    	}
    	return $_SESSION['qquery'];
    
+   }
+   
+   
+   /**
+    * Insert int MySQL table
+    * 
+    */
+   public function insertMySQL($table,$val1,$val2,$val3,$val4,$val5,$val6)
+   {
+   $sql = 'insert into idb_temp values(:val1, :val2, :val3, :val4, :val5, :val6 )';
+   $query = $this->MyDb->prepare($sql);
+   
+   $query->execute(array(":val1" => $val1,
+   						 ":val2" => $val2,
+   						 ":val3" => $val3,
+   						 ":val4" => $val4,
+   						 ":val5" => $val5,
+   						 ":val6" => $val6));
    }
 
 

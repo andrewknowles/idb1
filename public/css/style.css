@@ -15,6 +15,19 @@ font-family: Arial, Helvetica, Verdana, Sans-serif;
 	background-position: 0px 0px;
 /*	background-repeat: no-repeat; */
 }
+
+.graph {
+/*    font-family: 'Oswald', sans-serif;
+    font-size: 80px;
+    font-weight: bold;
+    color: #222; */
+    margin: 0px 30px;
+    height: 150px;
+	background: #CFCFCF url(../img/undo.png);
+	background-position: 0px 0px;
+	background-repeat: no-repeat;
+}
+
 .logo .number {
     color: #222;
     opacity: 0.1;

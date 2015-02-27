@@ -50,7 +50,7 @@ foreach($_SESSION['detail_result'] as $res)
 
 echo $tbl2->display();
 
-echo 'You are in the View: application/views/result/part_sales_month.php';
+echo 'You are in the View: application/views/result/display_result.php';
  ?>
  
 </div>

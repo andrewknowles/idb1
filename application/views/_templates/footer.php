@@ -6,7 +6,7 @@
     <script>
         var url = "<?php echo URL; ?>";
     </script>
-
+This is in the footer
     <!-- our JavaScript -->
     <script src="<?php echo URL; ?>js/application.js"></script>
 </body>

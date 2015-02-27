@@ -17,5 +17,9 @@
 </fieldset>
 </form>
 You are in the View: application/views/home/login.php
+        <div>
+            <button id="javascript-ajax-button">Click here to count queries)</button>
+            <div id="javascript-ajax-result-box"></div>
+        </div>
   
 </div>
