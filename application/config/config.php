@@ -52,7 +52,7 @@ define('DB_NAME', 'idb');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
-define('IFXODBC', 'IR_HCMUKPROD');
+define('IFXODBC', 'IR_HCMUK_TEST');
 define('IFXUSER', 'informix');
 define('IFXPASS', 'informix');
 

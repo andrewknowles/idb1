@@ -24,9 +24,10 @@
         <a href="<?php echo URL; ?>home/exampleone">documentation</a>
         <a href="<?php echo URL; ?>home/exampletwo">support</a>
         <a href="<?php echo URL; ?>companybranch">error msg</a>
-        <a href="application/libs/query_editor2.php">Query Editor</a>
+        <a href="<?php echo URL; ?>query_editor_controller/select">query_edit</a>
     </div>
-    
+
+        </div>    
         <!-- logo -->
     <div class="logo">
     <!-- image in style.css -->

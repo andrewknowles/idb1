@@ -20,7 +20,31 @@ xmlhttp.send();
 }
 </script>
 </head>-->
-
+<head>
+<script>
+function showUser(str) {
+    if (str == "") {
+        document.getElementById("txtHint").innerHTML = "";
+        return;
+    } else { 
+        if (window.XMLHttpRequest) {
+            // code for IE7+, Firefox, Chrome, Opera, Safari
+            xmlhttp = new XMLHttpRequest();
+        } else {
+            // code for IE6, IE5
+            xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+        }
+        xmlhttp.onreadystatechange = function() {
+            if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+                document.getElementById("txtHint").innerHTML = xmlhttp.responseText;
+            }
+        }
+        xmlhttp.open("GET","getuser.php?q="+str,true);
+        xmlhttp.send();
+    }
+}
+</script>
+</head>
 
 
 <body>
@@ -38,7 +62,7 @@ if (!empty($_SESSION['message']))
 
 <fieldset >
 
-<select name="company">
+<select name="company" onchange="getbranch(this.value)">
 <option value="">Select a company:</option>
 <?php
 foreach($_SESSION['companies'] as $x=>$x_value) {?>
@@ -72,7 +96,7 @@ foreach($_SESSION['branches'] as $x=>$x_value) {?>
 <td><input type="radio" name="mainmenuchoice" value="detailf" checked>To define</td></tr>
 <tr>
 <td><input type="radio" name="mainmenuchoice" value="h" checked>Parts Stocks</td>
-<td><input type="radio" name="mainmenuchoice" value="i" checked>Work In Progress</td>
+<td><input type="radio" name="mainmenuchoice" value="wips" checked>Work In Progress</td>
 <td><input type="radio" name="mainmenuchoice" value="j" checked>To define</td>
 <td><input type="radio" name="mainmenuchoice" value="k" checked>To define</td></tr>
 <tr>
@@ -86,8 +110,10 @@ foreach($_SESSION['branches'] as $x=>$x_value) {?>
 
 </fieldset>
 </form>
-<!-- <div id="myDiv"><h2>Let AJAX change this text</h2></div>
-<button type="button" onclick="loadXMLDoc()">Change Content</button>-->
+<div>
+            <button id="javascript-ajax-button">Click here to get the amount of songs via Ajax (will be displayed in #javascript-ajax-result-box)</button>
+            <div id="javascript-ajax-result-box"></div>
+        </div>
 You are in the View: application/views/menus/main_menu.php
 
 </div>

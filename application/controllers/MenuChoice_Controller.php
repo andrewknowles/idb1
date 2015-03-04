@@ -50,7 +50,7 @@ $_SESSION['message'] = 'Must set company/branch';
 			$quickqueries =	$this->Mymodel->GetQueriesByType(11);
 			$this->Ifxmodel->RunQuickQueries();
 			require APP . 'views/_templates/header.php';
-			require APP . 'views/menus/quickResult.php';
+			require APP . 'views/result/quickResult.php';
 			require APP . 'views/_templates/footer.php';
 		}
 		
@@ -71,6 +71,14 @@ $_SESSION['message'] = 'Must set company/branch';
 		
 			require APP . 'views/_templates/header.php';
 			require APP . 'views/menus/part_sales.php';
+			require APP . 'views/_templates/footer.php';
+		}
+		
+		if ($_POST['mainmenuchoice'] == 'wips')
+		{
+		
+			require APP . 'views/_templates/header.php';
+			require APP . 'views/menus/service_wip.php';
 			require APP . 'views/_templates/footer.php';
 		}
 		

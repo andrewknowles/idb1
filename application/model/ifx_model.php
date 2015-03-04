@@ -1,5 +1,5 @@
 <?php
-
+set_time_limit ( 0 );
 class Ifx_Model
   {
     /**
@@ -185,6 +185,7 @@ class Ifx_Model
     
     public function RunDetailQuery()
       {
+
         try
           {
             $_SESSION['detail_result'] = array();
@@ -205,12 +206,11 @@ class Ifx_Model
                    	$query1 = odbc_prepare($this->IfxCon, $qryquick);
 					$res = odbc_execute($query1, array($bra));
                   }
-                  
+
                     while ( $row = odbc_fetch_array ( $query1 ) )
                       {
                         array_push($_SESSION['detail_result'], $row);
-                      } 
-                      
+                      }      
               }
             
             if ((count($_SESSION['detail_result']) < 1))

@@ -36,6 +36,18 @@ class My_Model
     }
     
     /**
+     * Get all queries for query editor
+     */
+    public function GetAllQueries()
+    {
+    	$sql = 'select qry_id, qry_title, qry_qry, qry_qry2, qry_qry3, qry_type, qry_order, qry_link, qry_detail  from idb_query order by qry_type, qry_order';
+    	$query = $this->MyDb->prepare($sql);
+    	$query->execute();
+    	$allqueries = $query->fetchAll(PDO::FETCH_ASSOC);
+    	return $allqueries;
+    }
+    
+    /**
      * Get company and branch queries
      */
     public function getCompanyBranchQueries()
@@ -96,7 +108,6 @@ class My_Model
     */
    public function GetQueriesByNumber($no)
    {
-   
    	$sql = 'select qry_id, qry_title, qry_qry, qry_qry2, qry_qry3, qry_detail from idb_query where qry_id = :id';
    	$query = $this->MyDb->prepare($sql);
    	$parameters = array(':id' => $no);
@@ -112,6 +123,70 @@ class My_Model
    
    }
    
+   /**
+    * Get queries by number
+    */
+   public function GetQueryForEdit($no)
+   {
+   	$sql = 'select qry_id, qry_title, qry_qry, qry_qry2, qry_qry3, qry_type, qry_order, qry_link, qry_detail from idb_query where qry_id = :id';
+   	$query = $this->MyDb->prepare($sql);
+   	$parameters = array(':id' => $no);
+   	$query->execute($parameters);
+   	$query->execute();
+   	$qqueries = $query->fetchAll(PDO::FETCH_ASSOC);
+   	$_SESSION['qquery'] = array();
+   	foreach ($qqueries as $qquery)
+   	{
+   		array_push($_SESSION['qquery'],$qquery);
+   	}
+   	return $_SESSION['qquery'];
+   	 
+   }
+   
+   /**
+    * Update query record
+    */
+   public function updateQuery($id,$title,$query,$query2,$query3,$type,$order,$link,$detail)
+   {
+
+   	$sql = 'update idb_query set qry_title = :title  where qry_id = :id';
+   	$query = $this->MyDb->prepare($sql);
+   	$query->execute(array(":title" => $title,  ":id" => $id));
+   	
+   	$sql = 'update idb_query set qry_qry = :query  where qry_id = :id';
+   	$query = $this->MyDb->prepare($sql);
+   	$query->execute(array(":query" => $query,  ":id" => $id));
+   	
+   	$sql = 'update idb_query set qry_qry2 = :query2  where qry_id = :id';
+   	$query = $this->MyDb->prepare($sql);
+   	$query->execute(array(":query2" => $query2,  ":id" => $id));
+
+   	$sql = 'update idb_query set qry_qry3 = :query3  where qry_id = :id';
+   	$query = $this->MyDb->prepare($sql);
+   	$query->execute(array(":query3" => $query3,  ":id" => $id));
+   	
+
+   	$sql = 'update idb_query set qry_type = :type  where qry_id = :id';
+   	$query = $this->MyDb->prepare($sql);
+   	$query->execute(array(":type" => $type,  ":id" => $id));
+   	
+
+   	$sql = 'update idb_query set qry_order = :order  where qry_id = :id';
+   	$query = $this->MyDb->prepare($sql);
+   	$query->execute(array(":order" => $order,  ":id" => $id));
+   	
+
+   	$sql = 'update idb_query set qry_link = :link  where qry_id = :id';
+   	$query = $this->MyDb->prepare($sql);
+   	$query->execute(array(":link" => $link,  ":id" => $id));
+   	
+   	$sql = 'update idb_query set qry_detail = :detail  where qry_id = :id';
+   	$query = $this->MyDb->prepare($sql);
+   	$query->execute(array(":detail" => $detail,  ":id" => $id));
+
+   }
+   
+
    
    /**
     * Insert int MySQL table

@@ -6,7 +6,7 @@ class service_detail_controller extends Controller
   {
     
     public function SelectQuery()
-      {
+      { 
         if (empty($_SESSION['cpy']) || empty($_SESSION['bra']) || empty($_POST['servicedetailmenuchoice']))
           {
             $_SESSION['message'] = 'Must set company/branch';
